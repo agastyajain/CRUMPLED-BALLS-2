@@ -44,19 +44,24 @@ function draw() {
  
 
 
-
-  if(keyCode === UP_ARROW){
-    Matter.Body.applyForce(paper.body,paper.body.position,{x:1,y:-3},200)
-   
-  }
-  /*if(keyCode === DOWN_ARROW){
-    Matter.Body.applyForce(paper.body,paper.body.position,{x:1,y:3});
-   
-  }*/
   
 
   drawSprites();
+  keyPressed();
 }
+
+
+function keyPresses(){
+   if(keyCode === UP_ARROW){
+    Matter.Body.applyForce(paper.body,paper.body.position,{x:1,y:-3})
+   
+  }
+  if(keyCode === DOWN_ARROW){
+    Matter.Body.applyForce(paper.body,paper.body.position,{x:1,y:3});
+   
+  }
+}
+  
 
 
 
